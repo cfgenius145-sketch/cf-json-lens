@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  .version {
+    float: left;
+    display: block;
+    padding: 9px;
+    text-decoration: none;
+
+    &:before {
+      content: "v";
+    }
+  }
+}
+
+h1 {
+  line-height: 128px;
+  margin: 0 0 0 -10px;
+  font-size: 2.5em;
+
+  .logo {
+    float: left;
+  }
+
+  .page-title {
+    display: inline-block;
+    margin: 3px 0 0 10px;
+  }
+}
+
+header {
+  padding: 20px 0 15px 0;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .explain strong, .hint {
+    font-size: 1.5em;
+  }
+
+  .hint {
+    font-style: italic;
+    color: #999;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+.CodeMirror {
+  font-family: monaco, Consolas, Menlo, Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.CodeMirror-hints {
+  font-family: monaco, Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#themes-example + .CodeMirror {
+  height: 300px;
+}
+
+#addons + .CodeMirror,
+#structure + .CodeMirror {
+  height: 250px;
+}
+
+#style + .CodeMirror {
+  height: 450px;
+  margin-bottom: 100px;
+}
+
+#addons + .CodeMirror
+#structure + .CodeMirror,
+#style + .CodeMirror {
+  pre {
+    margin-left: 0;
+  }
+
+  .CodeMirror-lines .CodeMirror-cursor {
+    margin-left: 0;
+  }
+}
+
+.select-style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
+}
+
+.select-style {
+  margin-bottom: 15px;
+
+  select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+  }
+}
+
+.action-bar {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: right;
+  z-index: 10;
+
+  button {
+  	background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  	background-color: #79bbff;
+  	border-radius: 6px;
+  	border: 1px solid #84bbf3;
+  	display: inline-block;
+  	cursor: pointer;
+  	color: #ffffff;
+  	font-family: Arial;
+  	font-size: 16px;
+  	font-weight: bold;
+  	padding: 6px 24px;
+  	text-decoration: none;
+  	text-shadow: 0px 1px 0px #528ecc;
+
+    &:hover {
+    	background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    	background-color: #378de5;
+    }
+
+    &:active {
+    	position: relative;
+    	top: 1px;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+	width: 128px;
+	height: 128px;
+	background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAADOElEQVR4nOzcS0hUURzH8Tv5StQKNaGFWMuIFrlo3SLJRW1atk4ialdtggja1CowI1rUogcFEllED0IqoQel2EPNfGVOZub4tvExo3MbGBjGtGkO98z8Nt/P6p47/7vxy7kjV2eyXdd1oLPGgRQBxAggRgAxAogRQIwAYgQQI4BYtgOdqWCYHSDzvm9698lmdoDGk5bAkUuflyIuAQTuvBw+fuVL7JgAmXat8cfpmz3xJQEy6lz918uP/IlnCJA55xv6//rpOwTImBvPhi7cH1h5ngCZ8LglcOp696ovESDtmtrGD1/s+NerBEivwdH5Q3XtSQYIkEbhxUhNbdt8KJJkhgBpdOZWb+f3YPIZAqTL09bR6G8+/x0jQFpMzy7GHzYkR4C0OFvfF22QyiQB7PvUP3P7xc8Uhwlgmeu6J66mdPOJIYBlD5sDXYPB1OcJYFntvW8m4wSw6vnHsZ6hWaNLCGBT3YMB00sIYE2H/3dr77RjiADW3H017BjKzfYRwI5IxG14/csxVFNdTgA7mtonxmfCRpcUF+Uc3VdBADsazO8/x/Zvyc/LIoAF0ftP44cxo0sqyvIP7Nrk8CZsRfSh/+zCktElB6vLfT6fQwAr3nVPOob2VJbEDghgwduuKaP57ZuLyjbkxY4JYMGbzgmj+aodpfFjAng1MhmaCqb0t5e4qkoC2DMwMmc0v3F97tbygviSAF75A2YB9u4sS1wSwCvTHbCtojBxSQCv/CPzRvMlRTmJSwJ4NTYTMpovXpebuCSAV8n/83ClYnaAXXMhs4cQxYUEsMpoB2Rn+QrWZi0748CbhbBBgNLlbwAOAbyLPotOfThrxQfj+aS8GAHECCBGADECiBFAjABiBBAjgBgBxAggRgAxAogRQIwAYgQQI4AYAcQIIEYAMQKIEUCMAGIEECOAGAHECCBGADECiBFAjABiBBAjgBgBxAggRgAxAogRQIwAYgQQI4AYAcQIIEYAMQKIEUCMAGIEECOAGAHE+Moyr1yDbyxbBTtAjABiBBAjgBgBxAggRgAxAogRQIwAYgQQI4AYAcQIIEYAMQKIEUCMAGIEECOAGAHECCBGADECiP0BAAD//0GzqjcAAAAGSURBVAMAYVG9drCLu3MAAAAASUVORK5CYII=');
+}

@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "CF JSON Lens",
+  "version": "1.0.0",
+  "description": "Pretty, fast JSON in your browser. Themes, collapsible tree, raw toggle.",
+  "homepage_url": "https://github.com/cfgenius145-sketch/cf-json-lens",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "service_worker": "assets/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "assets/viewer.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "assets/main-world.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "omnibox": {
+    "keyword": "json"
+  },
+  "options_ui": {
+    "page": "pages/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/viewer.css",
+        "assets/viewer-alert.css",
+        "pages/options.html",
+        "pages/omnibox.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
