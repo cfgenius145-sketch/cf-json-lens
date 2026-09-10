@@ -5,8 +5,8 @@ Túlio Ornelas (MIT), rebranded as CF JSON Lens and rebuilt on a modern
 toolchain.
 
 **Package:** `dist/cf-json-lens-1.0.0.zip`
-**sha256:** `334d23efe1bacb2e7a94820b577c6200f5640d0af1b6d0661f53f76d22210c5c`
-**Size:** 319,876 bytes, 54 entries, `manifest.json` at the zip root.
+**sha256:** `6aeb1282bde9ccacbd33d0bb96531cbfc94e2671d5741f5b48dd16740b42ca96`
+**Size:** 330,455 bytes, 54 entries, `manifest.json` at the zip root.
 
 **Tests: 11/11 passing, zero console errors** — run against the build directory
 and again against the unzipped package.
