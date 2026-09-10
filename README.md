@@ -54,6 +54,11 @@ Chrome does not give extensions access to `file://` URLs by default. To use
 CF JSON Lens on JSON files opened from disk, open `chrome://extensions`, click
 **Details** on CF JSON Lens, and enable **Allow access to file URLs**.
 
+## Privacy
+
+CF JSON Lens collects no data, makes no network requests, and never transmits
+page content. See [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT. See `LICENSE`.
